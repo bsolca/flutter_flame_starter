@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'dart:math';
 
+import 'package:flame/components.dart';
 import 'package:flutter_flame_starter/src/features/game/model/game_model.codegen.dart';
 import 'package:flutter_flame_starter/src/features/game_progress/controller/game_progress_controller.codegen.dart';
 import 'package:flutter_flame_starter/src/features/game_progress/model/game_progress_model.codegen.dart';
@@ -13,17 +15,71 @@ part 'game_controller.codegen.g.dart';
 /// Controller for game business logic.
 @riverpod
 class GameController extends _$GameController {
+  static const double _gameDuration = 10.0;
+  static const double _buttonSize = 80.0;
+  static const double _updateInterval = 0.05; // Update every 50ms
+
+  double _accumulatedTime = 0.0;
+
   @override
   GameModel build() {
     return const GameModel.newGame();
   }
 
   /// Start the game.
-  void startGame() {
-    state = const GameModel(
+  void startGame(Vector2 gameSize) {
+    _accumulatedTime = 0.0;
+    final position = _generateRandomPosition(gameSize);
+    state = GameModel(
       score: 0,
       isPaused: false,
       isGameOver: false,
+      remainingTime: _gameDuration,
+      buttonX: position.x,
+      buttonY: position.y,
+    );
+  }
+
+  /// Update the timer.
+  void updateTimer(double dt) {
+    if (state.isPaused || state.isGameOver) return;
+
+    _accumulatedTime += dt;
+    if (_accumulatedTime >= _updateInterval) {
+      final newTime = state.remainingTime - _accumulatedTime;
+      _accumulatedTime = 0.0;
+
+      if (newTime <= 0) {
+        unawaited(endGame());
+      } else {
+        // Defer state update to avoid modifying provider during build
+        Future(() {
+          state = state.copyWith(remainingTime: newTime);
+        });
+      }
+    }
+  }
+
+  /// Handle button click.
+  void onButtonClicked(Vector2 gameSize) {
+    if (state.isPaused || state.isGameOver) return;
+
+    final position = _generateRandomPosition(gameSize);
+    state = state.copyWith(
+      score: state.score + 1,
+      buttonX: position.x,
+      buttonY: position.y,
+    );
+  }
+
+  /// Generate random button position.
+  Vector2 _generateRandomPosition(Vector2 gameSize) {
+    final random = Random();
+    final maxX = gameSize.x - _buttonSize;
+    final maxY = gameSize.y - _buttonSize;
+    return Vector2(
+      random.nextDouble() * maxX + _buttonSize / 2,
+      random.nextDouble() * maxY + _buttonSize / 2,
     );
   }
 
@@ -48,6 +104,7 @@ class GameController extends _$GameController {
     state = state.copyWith(
       isGameOver: true,
       isPaused: true,
+      remainingTime: 0.0,
     );
 
     // Save high score
@@ -76,6 +133,7 @@ class GameController extends _$GameController {
 
   /// Reset the game.
   void resetGame() {
+    _accumulatedTime = 0.0;
     state = const GameModel.newGame();
   }
 
@@ -88,6 +146,9 @@ class GameController extends _$GameController {
         score: progress.score,
         isPaused: progress.isPaused,
         isGameOver: progress.isGameOver,
+        remainingTime: progress.isGameOver ? 0.0 : _gameDuration,
+        buttonX: null,
+        buttonY: null,
       );
     }
   }

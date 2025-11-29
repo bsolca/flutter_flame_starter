@@ -8,11 +8,17 @@ abstract class GameModel with _$GameModel {
     required int score,
     required bool isPaused,
     required bool isGameOver,
+    required double remainingTime,
+    double? buttonX,
+    double? buttonY,
   }) = _GameModel;
 
   const factory GameModel.newGame({
     @Default(0) int score,
     @Default(false) bool isPaused,
     @Default(false) bool isGameOver,
+    @Default(10.0) double remainingTime,
+    double? buttonX,
+    double? buttonY,
   }) = _GameModelNewGame;
 }
