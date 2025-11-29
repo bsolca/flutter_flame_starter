@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter_flame_starter/src/features/settings/data/game_settings_repository.codegen.dart';
 import 'package:flutter_flame_starter/src/features/settings/model/game_settings_model.codegen.dart';
 import 'package:flutter_flame_starter/src/utils/constants/ez_const_string.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 /// Hive game settings repository implementation.
 class GameSettingsRepositoryHive implements GameSettingsRepository {
@@ -38,4 +38,3 @@ class GameSettingsRepositoryHive implements GameSettingsRepository {
     );
   }
 }
-

@@ -17,14 +17,17 @@ class GameProgressController extends _$GameProgressController {
   Future<void> saveProgress(GameProgressModel progress) async {
     final repository = ref.read(gameProgressRepositoryProvider);
     await repository.saveGameProgress(progress);
-    ref.invalidateSelf();
+    if (ref.mounted) {
+      ref.invalidateSelf();
+    }
   }
 
   /// Clear saved game progress.
   Future<void> clearProgress() async {
     final repository = ref.read(gameProgressRepositoryProvider);
     await repository.clearGameProgress();
-    ref.invalidateSelf();
+    if (ref.mounted) {
+      ref.invalidateSelf();
+    }
   }
 }
-

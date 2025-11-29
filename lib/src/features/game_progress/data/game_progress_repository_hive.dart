@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter_flame_starter/src/features/game_progress/data/game_progress_repository.codegen.dart';
 import 'package:flutter_flame_starter/src/features/game_progress/model/game_progress_model.codegen.dart';
 import 'package:flutter_flame_starter/src/utils/constants/ez_const_string.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 /// Hive game progress repository implementation.
 class GameProgressRepositoryHive implements GameProgressRepository {
@@ -41,4 +41,3 @@ class GameProgressRepositoryHive implements GameProgressRepository {
     await box.delete(EzConstString.hiveGameProgress);
   }
 }
-

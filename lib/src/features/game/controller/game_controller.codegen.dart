@@ -81,8 +81,6 @@ class GameController extends _$GameController {
 
   /// Load saved game progress.
   Future<void> loadGameProgress() async {
-    final gameProgressController =
-        ref.read(gameProgressControllerProvider.notifier);
     final progress = await ref.read(gameProgressControllerProvider.future);
 
     if (progress != null) {

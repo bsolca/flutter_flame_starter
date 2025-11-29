@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 part 'game_settings_model.codegen.freezed.dart';
+
 part 'game_settings_model.codegen.g.dart';
 
 @freezed
@@ -19,4 +19,3 @@ abstract class GameSettingsModel with _$GameSettingsModel {
 
   factory GameSettingsModel.defaultSettings() => const GameSettingsModel();
 }
-

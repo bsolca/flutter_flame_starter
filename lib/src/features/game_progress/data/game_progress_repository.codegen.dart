@@ -8,7 +8,9 @@ part 'game_progress_repository.codegen.g.dart';
 /// Repository interface for game progress.
 abstract class GameProgressRepository {
   Future<GameProgressModel?> getGameProgress();
+
   Future<void> saveGameProgress(GameProgressModel progress);
+
   Future<void> clearGameProgress();
 }
 
@@ -18,4 +20,3 @@ GameProgressRepository gameProgressRepository(Ref ref) {
   final box = ref.watch(hiveGameProgressBoxProvider);
   return GameProgressRepositoryHive(box);
 }
-

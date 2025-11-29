@@ -8,7 +8,9 @@ part 'player_stats_repository.codegen.g.dart';
 /// Repository interface for player stats.
 abstract class PlayerStatsRepository {
   Future<PlayerStatsModel> getPlayerStats();
+
   Future<void> savePlayerStats(PlayerStatsModel stats);
+
   Future<void> updateStats({
     int? score,
     bool? won,
@@ -22,4 +24,3 @@ PlayerStatsRepository playerStatsRepository(Ref ref) {
   final box = ref.watch(hivePlayerStatsBoxProvider);
   return PlayerStatsRepositoryHive(box);
 }
-

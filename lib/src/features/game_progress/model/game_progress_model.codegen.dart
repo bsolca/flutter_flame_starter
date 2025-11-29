@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 part 'game_progress_model.codegen.freezed.dart';
+
 part 'game_progress_model.codegen.g.dart';
 
 @freezed
@@ -17,4 +17,3 @@ abstract class GameProgressModel with _$GameProgressModel {
   factory GameProgressModel.fromJson(Map<String, dynamic> json) =>
       _$GameProgressModelFromJson(json);
 }
-

@@ -17,14 +17,17 @@ class HighScoreController extends _$HighScoreController {
   Future<void> addHighScore(HighScoreModel highScore) async {
     final repository = ref.read(highScoreRepositoryProvider);
     await repository.saveHighScore(highScore);
-    ref.invalidateSelf();
+    if (ref.mounted) {
+      ref.invalidateSelf();
+    }
   }
 
   /// Clear all high scores.
   Future<void> clearHighScores() async {
     final repository = ref.read(highScoreRepositoryProvider);
     await repository.clearHighScores();
-    ref.invalidateSelf();
+    if (ref.mounted) {
+      ref.invalidateSelf();
+    }
   }
 }
-

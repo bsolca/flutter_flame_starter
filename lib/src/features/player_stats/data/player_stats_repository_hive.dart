@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter_flame_starter/src/features/player_stats/data/player_stats_repository.codegen.dart';
 import 'package:flutter_flame_starter/src/features/player_stats/model/player_stats_model.codegen.dart';
 import 'package:flutter_flame_starter/src/utils/constants/ez_const_string.dart';
-import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 /// Hive player stats repository implementation.
 class PlayerStatsRepositoryHive implements PlayerStatsRepository {
@@ -52,10 +52,10 @@ class PlayerStatsRepositoryHive implements PlayerStatsRepository {
       bestScore: score != null && score > currentStats.bestScore
           ? score
           : currentStats.bestScore,
-      gamesWon: won == true
+      gamesWon: won ?? false
           ? currentStats.gamesWon + 1
           : currentStats.gamesWon,
-      gamesLost: lost == true
+      gamesLost: lost ?? false
           ? currentStats.gamesLost + 1
           : currentStats.gamesLost,
       lastPlayedDate: DateTime.now(),
@@ -64,4 +64,3 @@ class PlayerStatsRepositoryHive implements PlayerStatsRepository {
     await savePlayerStats(updatedStats);
   }
 }
-

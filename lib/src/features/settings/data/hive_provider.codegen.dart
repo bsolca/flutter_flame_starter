@@ -9,4 +9,3 @@ part 'hive_provider.codegen.g.dart';
 Box<String> hiveGameSettingsBox(Ref ref) {
   return Hive.box<String>(EzConstString.hiveGameSettings);
 }
-

@@ -24,14 +24,17 @@ class PlayerStatsController extends _$PlayerStatsController {
       won: won,
       lost: !won,
     );
-    ref.invalidateSelf();
+    if (ref.mounted) {
+      ref.invalidateSelf();
+    }
   }
 
   /// Reset all player stats.
   Future<void> resetStats() async {
     final repository = ref.read(playerStatsRepositoryProvider);
     await repository.savePlayerStats(const PlayerStatsModel());
-    ref.invalidateSelf();
+    if (ref.mounted) {
+      ref.invalidateSelf();
+    }
   }
 }
-

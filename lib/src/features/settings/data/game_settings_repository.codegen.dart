@@ -8,6 +8,7 @@ part 'game_settings_repository.codegen.g.dart';
 /// Repository interface for game settings.
 abstract class GameSettingsRepository {
   Future<GameSettingsModel> getGameSettings();
+
   Future<void> saveGameSettings(GameSettingsModel settings);
 }
 
@@ -17,4 +18,3 @@ GameSettingsRepository gameSettingsRepository(Ref ref) {
   final box = ref.watch(hiveGameSettingsBoxProvider);
   return GameSettingsRepositoryHive(box);
 }
-

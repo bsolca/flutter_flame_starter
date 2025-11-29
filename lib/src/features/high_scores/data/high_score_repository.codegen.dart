@@ -8,7 +8,9 @@ part 'high_score_repository.codegen.g.dart';
 /// Repository interface for high scores.
 abstract class HighScoreRepository {
   Future<List<HighScoreModel>> getHighScores();
+
   Future<void> saveHighScore(HighScoreModel highScore);
+
   Future<void> clearHighScores();
 }
 
@@ -18,4 +20,3 @@ HighScoreRepository highScoreRepository(Ref ref) {
   final box = ref.watch(hiveHighScoresBoxProvider);
   return HighScoreRepositoryHive(box);
 }
-

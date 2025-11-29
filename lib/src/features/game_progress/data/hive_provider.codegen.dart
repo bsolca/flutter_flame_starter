@@ -9,4 +9,3 @@ part 'hive_provider.codegen.g.dart';
 Box<String> hiveGameProgressBox(Ref ref) {
   return Hive.box<String>(EzConstString.hiveGameProgress);
 }
-

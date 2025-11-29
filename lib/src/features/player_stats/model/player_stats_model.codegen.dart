@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 part 'player_stats_model.codegen.freezed.dart';
+
 part 'player_stats_model.codegen.g.dart';
 
 @freezed
@@ -18,4 +18,3 @@ abstract class PlayerStatsModel with _$PlayerStatsModel {
   factory PlayerStatsModel.fromJson(Map<String, dynamic> json) =>
       _$PlayerStatsModelFromJson(json);
 }
-

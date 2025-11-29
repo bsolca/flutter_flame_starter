@@ -38,4 +38,3 @@ class SettingsController extends _$SettingsController {
     await updateSettings(current.copyWith(difficulty: difficulty));
   }
 }
-

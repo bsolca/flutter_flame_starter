@@ -19,6 +19,7 @@ class App extends ConsumerWidget {
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.blue,
+          brightness: Brightness.dark,
         ),
       ),
       onGenerateTitle: (BuildContext context) {
