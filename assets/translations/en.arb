@@ -1,0 +1,44 @@
+{
+  "@@locale": "en",
+  "appTitle": "Flame Game Starter",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "gameTitle": "Game",
+  "@gameTitle": {
+    "description": "Title for the game screen"
+  },
+  "startGame": "Start Game",
+  "@startGame": {
+    "description": "Button text to start the game"
+  },
+  "pauseGame": "Pause",
+  "@pauseGame": {
+    "description": "Button text to pause the game"
+  },
+  "resumeGame": "Resume",
+  "@resumeGame": {
+    "description": "Button text to resume the game"
+  },
+  "gameOver": "Game Over",
+  "@gameOver": {
+    "description": "Text shown when game ends"
+  },
+  "score": "Score",
+  "@score": {
+    "description": "Label for score display"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Label for language setting"
+  },
+  "english": "English",
+  "@english": {
+    "description": "English language name"
+  },
+  "french": "French",
+  "@french": {
+    "description": "French language name"
+  }
+}
+

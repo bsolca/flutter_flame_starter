@@ -1,0 +1,14 @@
+{
+  "@@locale": "fr",
+  "appTitle": "Démarreur de Jeu Flame",
+  "gameTitle": "Jeu",
+  "startGame": "Démarrer le Jeu",
+  "pauseGame": "Pause",
+  "resumeGame": "Reprendre",
+  "gameOver": "Fin de Partie",
+  "score": "Score",
+  "language": "Langue",
+  "english": "Anglais",
+  "french": "Français"
+}
+
