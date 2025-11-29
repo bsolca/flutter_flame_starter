@@ -8,15 +8,15 @@ part of 'game_controller.codegen.dart';
 
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
-/// Controller for game state management.
+/// Controller for game business logic.
 
 @ProviderFor(GameController)
 const gameControllerProvider = GameControllerProvider._();
 
-/// Controller for game state management.
+/// Controller for game business logic.
 final class GameControllerProvider
-    extends $NotifierProvider<GameController, GameService> {
-  /// Controller for game state management.
+    extends $NotifierProvider<GameController, GameModel> {
+  /// Controller for game business logic.
   const GameControllerProvider._()
     : super(
         from: null,
@@ -36,30 +36,30 @@ final class GameControllerProvider
   GameController create() => GameController();
 
   /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(GameService value) {
+  Override overrideWithValue(GameModel value) {
     return $ProviderOverride(
       origin: this,
-      providerOverride: $SyncValueProvider<GameService>(value),
+      providerOverride: $SyncValueProvider<GameModel>(value),
     );
   }
 }
 
-String _$gameControllerHash() => r'2a05b0f4296c056d798ad446a77b3d5eb757f862';
+String _$gameControllerHash() => r'1044fd2b01614984e5676ff5f30d6caff11e1928';
 
-/// Controller for game state management.
+/// Controller for game business logic.
 
-abstract class _$GameController extends $Notifier<GameService> {
-  GameService build();
+abstract class _$GameController extends $Notifier<GameModel> {
+  GameModel build();
   @$mustCallSuper
   @override
   void runBuild() {
     final created = build();
-    final ref = this.ref as $Ref<GameService, GameService>;
+    final ref = this.ref as $Ref<GameModel, GameModel>;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<GameService, GameService>,
-              GameService,
+              AnyNotifier<GameModel, GameModel>,
+              GameModel,
               Object?,
               Object?
             >;

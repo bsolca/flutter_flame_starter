@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_flame_starter/src/features/game/controller/game_controller.codegen.dart';
-import 'package:flutter_flame_starter/src/features/game/service/game_service.codegen.dart';
 import 'package:flutter_flame_starter/src/features/game/ui/game_widget.dart';
 import 'package:flutter_flame_starter/src/utils/constants/ez_const_layout.dart';
 import 'package:flutter_flame_starter/src/utils/localization/app_local.codegen.dart';
@@ -12,7 +11,7 @@ class GameScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final gameState = ref.watch(gameServiceProvider);
+    final gameState = ref.watch(gameControllerProvider);
     final appLocal = ref.watch(appLocalProvider);
     final gameController = ref.read(gameControllerProvider.notifier);
 

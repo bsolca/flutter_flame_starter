@@ -1,43 +1,50 @@
-import 'package:flutter_flame_starter/src/features/game/service/game_service.codegen.dart';
+import 'package:flutter_flame_starter/src/features/game/model/game_model.codegen.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'game_controller.codegen.g.dart';
 
-/// Controller for game state management.
+/// Controller for game business logic.
 @riverpod
 class GameController extends _$GameController {
   @override
-  GameService build() {
-    return ref.read(gameServiceProvider.notifier);
+  GameModel build() {
+    return const GameModel.newGame();
   }
 
   /// Start the game.
   void startGame() {
-    state.startGame();
+    state = const GameModel(
+      score: 0,
+      isPaused: false,
+      isGameOver: false,
+    );
   }
 
   /// Pause the game.
   void pauseGame() {
-    state.pauseGame();
+    state = state.copyWith(isPaused: true);
   }
 
   /// Resume the game.
   void resumeGame() {
-    state.resumeGame();
+    state = state.copyWith(isPaused: false);
   }
 
   /// Update the score.
   void updateScore(int newScore) {
-    state.updateScore(newScore);
+    state = state.copyWith(score: newScore);
   }
 
   /// End the game.
   void endGame() {
-    state.endGame();
+    state = state.copyWith(
+      isGameOver: true,
+      isPaused: true,
+    );
   }
 
   /// Reset the game.
   void resetGame() {
-    state.resetGame();
+    state = const GameModel.newGame();
   }
 }
