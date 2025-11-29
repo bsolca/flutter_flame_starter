@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_flame_starter/src/screens/game_screen.dart';
+import 'package:flutter_flame_starter/src/screens/home_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -12,12 +12,12 @@ Raw<GoRouter> goRouter(Ref ref) {
 
   final goRouter = GoRouter(
     navigatorKey: rootNavigatorKey,
-    initialLocation: '/game',
+    initialLocation: '/home',
     routes: [
       GoRoute(
-        path: '/game',
-        name: 'game',
-        builder: (context, state) => const GameScreen(),
+        path: '/home',
+        name: 'home',
+        builder: (context, state) => const HomeScreen(),
       ),
     ],
     errorBuilder: (context, state) => Scaffold(

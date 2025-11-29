@@ -37,4 +37,58 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get french => 'French';
+
+  @override
+  String get homeTitle => 'Home';
+
+  @override
+  String get highScores => 'High Scores';
+
+  @override
+  String get playerStats => 'Player Stats';
+
+  @override
+  String get gameSettings => 'Game Settings';
+
+  @override
+  String get gameProgress => 'Game Progress';
+
+  @override
+  String get playGame => 'Play Game';
+
+  @override
+  String get clear => 'Clear';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get totalGames => 'Total Games';
+
+  @override
+  String get bestScore => 'Best Score';
+
+  @override
+  String get gamesWon => 'Games Won';
+
+  @override
+  String get gamesLost => 'Games Lost';
+
+  @override
+  String get lastPlayed => 'Last Played';
+
+  @override
+  String get soundEnabled => 'Sound Enabled';
+
+  @override
+  String get musicEnabled => 'Music Enabled';
+
+  @override
+  String get difficulty => 'Difficulty';
+
+  @override
+  String get noHighScores => 'No high scores yet';
+
+  @override
+  String get noGameProgress => 'No saved game progress';
 }

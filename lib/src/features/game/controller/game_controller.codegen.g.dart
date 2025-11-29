@@ -44,7 +44,7 @@ final class GameControllerProvider
   }
 }
 
-String _$gameControllerHash() => r'9418f05061b2571093b2f63e8d0326048d68648f';
+String _$gameControllerHash() => r'a63b06ecadc36c8375149b173ebb6e3f6cc731c2';
 
 /// Controller for game business logic.
 

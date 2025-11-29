@@ -37,7 +37,7 @@ final class PlayerStatsControllerProvider
 }
 
 String _$playerStatsControllerHash() =>
-    r'a81769e465ccce60330a5184c3ae4d3d58abe6c4';
+    r'49403f44dbc34868594e74aa6cbd6237a2227dd7';
 
 /// Controller for player stats business logic.
 

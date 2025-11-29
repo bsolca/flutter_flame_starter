@@ -39,6 +39,78 @@
   "french": "French",
   "@french": {
     "description": "French language name"
+  },
+  "homeTitle": "Home",
+  "@homeTitle": {
+    "description": "Title for the home screen"
+  },
+  "highScores": "High Scores",
+  "@highScores": {
+    "description": "Label for high scores section"
+  },
+  "playerStats": "Player Stats",
+  "@playerStats": {
+    "description": "Label for player stats section"
+  },
+  "gameSettings": "Game Settings",
+  "@gameSettings": {
+    "description": "Label for game settings section"
+  },
+  "gameProgress": "Game Progress",
+  "@gameProgress": {
+    "description": "Label for game progress section"
+  },
+  "playGame": "Play Game",
+  "@playGame": {
+    "description": "Button text to play the game"
+  },
+  "clear": "Clear",
+  "@clear": {
+    "description": "Button text to clear data"
+  },
+  "reset": "Reset",
+  "@reset": {
+    "description": "Button text to reset data"
+  },
+  "totalGames": "Total Games",
+  "@totalGames": {
+    "description": "Label for total games stat"
+  },
+  "bestScore": "Best Score",
+  "@bestScore": {
+    "description": "Label for best score stat"
+  },
+  "gamesWon": "Games Won",
+  "@gamesWon": {
+    "description": "Label for games won stat"
+  },
+  "gamesLost": "Games Lost",
+  "@gamesLost": {
+    "description": "Label for games lost stat"
+  },
+  "lastPlayed": "Last Played",
+  "@lastPlayed": {
+    "description": "Label for last played date"
+  },
+  "soundEnabled": "Sound Enabled",
+  "@soundEnabled": {
+    "description": "Label for sound enabled setting"
+  },
+  "musicEnabled": "Music Enabled",
+  "@musicEnabled": {
+    "description": "Label for music enabled setting"
+  },
+  "difficulty": "Difficulty",
+  "@difficulty": {
+    "description": "Label for difficulty setting"
+  },
+  "noHighScores": "No high scores yet",
+  "@noHighScores": {
+    "description": "Message when no high scores exist"
+  },
+  "noGameProgress": "No saved game progress",
+  "@noGameProgress": {
+    "description": "Message when no game progress exists"
   }
 }
 

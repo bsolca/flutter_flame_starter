@@ -9,6 +9,24 @@
   "score": "Score",
   "language": "Langue",
   "english": "Anglais",
-  "french": "Français"
+  "french": "Français",
+  "homeTitle": "Accueil",
+  "highScores": "Meilleurs Scores",
+  "playerStats": "Statistiques du Joueur",
+  "gameSettings": "Paramètres du Jeu",
+  "gameProgress": "Progression du Jeu",
+  "playGame": "Jouer",
+  "clear": "Effacer",
+  "reset": "Réinitialiser",
+  "totalGames": "Parties Totales",
+  "bestScore": "Meilleur Score",
+  "gamesWon": "Parties Gagnées",
+  "gamesLost": "Parties Perdues",
+  "lastPlayed": "Dernière Partie",
+  "soundEnabled": "Son Activé",
+  "musicEnabled": "Musique Activée",
+  "difficulty": "Difficulté",
+  "noHighScores": "Aucun meilleur score",
+  "noGameProgress": "Aucune progression sauvegardée"
 }
 

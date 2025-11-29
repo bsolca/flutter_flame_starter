@@ -37,7 +37,7 @@ final class GameProgressControllerProvider
 }
 
 String _$gameProgressControllerHash() =>
-    r'd6e4cada489afca7c67f6844e93e141299d6f708';
+    r'e6a81a48c1e18b77714542f542546e79b798cae9';
 
 /// Controller for game progress business logic.
 

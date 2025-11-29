@@ -157,6 +157,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'French'**
   String get french;
+
+  /// Title for the home screen
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get homeTitle;
+
+  /// Label for high scores section
+  ///
+  /// In en, this message translates to:
+  /// **'High Scores'**
+  String get highScores;
+
+  /// Label for player stats section
+  ///
+  /// In en, this message translates to:
+  /// **'Player Stats'**
+  String get playerStats;
+
+  /// Label for game settings section
+  ///
+  /// In en, this message translates to:
+  /// **'Game Settings'**
+  String get gameSettings;
+
+  /// Label for game progress section
+  ///
+  /// In en, this message translates to:
+  /// **'Game Progress'**
+  String get gameProgress;
+
+  /// Button text to play the game
+  ///
+  /// In en, this message translates to:
+  /// **'Play Game'**
+  String get playGame;
+
+  /// Button text to clear data
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clear;
+
+  /// Button text to reset data
+  ///
+  /// In en, this message translates to:
+  /// **'Reset'**
+  String get reset;
+
+  /// Label for total games stat
+  ///
+  /// In en, this message translates to:
+  /// **'Total Games'**
+  String get totalGames;
+
+  /// Label for best score stat
+  ///
+  /// In en, this message translates to:
+  /// **'Best Score'**
+  String get bestScore;
+
+  /// Label for games won stat
+  ///
+  /// In en, this message translates to:
+  /// **'Games Won'**
+  String get gamesWon;
+
+  /// Label for games lost stat
+  ///
+  /// In en, this message translates to:
+  /// **'Games Lost'**
+  String get gamesLost;
+
+  /// Label for last played date
+  ///
+  /// In en, this message translates to:
+  /// **'Last Played'**
+  String get lastPlayed;
+
+  /// Label for sound enabled setting
+  ///
+  /// In en, this message translates to:
+  /// **'Sound Enabled'**
+  String get soundEnabled;
+
+  /// Label for music enabled setting
+  ///
+  /// In en, this message translates to:
+  /// **'Music Enabled'**
+  String get musicEnabled;
+
+  /// Label for difficulty setting
+  ///
+  /// In en, this message translates to:
+  /// **'Difficulty'**
+  String get difficulty;
+
+  /// Message when no high scores exist
+  ///
+  /// In en, this message translates to:
+  /// **'No high scores yet'**
+  String get noHighScores;
+
+  /// Message when no game progress exists
+  ///
+  /// In en, this message translates to:
+  /// **'No saved game progress'**
+  String get noGameProgress;
 }
 
 class _AppLocalizationsDelegate

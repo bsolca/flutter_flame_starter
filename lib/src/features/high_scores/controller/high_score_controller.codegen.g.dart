@@ -37,7 +37,7 @@ final class HighScoreControllerProvider
 }
 
 String _$highScoreControllerHash() =>
-    r'5ec6d183b015e04ef748ea51059526f35b09716d';
+    r'11dac7b8f2f1b43d5d8c670370b4cbd59551e050';
 
 /// Controller for high score business logic.
 
