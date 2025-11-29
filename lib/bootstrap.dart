@@ -17,6 +17,13 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
 
   logInfo('App bootstrap started');
 
+  // TODO Setup supabase initialization when needed and remove the comment below
+  // Initialize Supabase
+  // final supabaseInitialized = await initializeSupabase();
+  // if (!supabaseInitialized) {
+  //   return;
+  // }
+
   // Run the app
   runApp(
     ProviderScope(
